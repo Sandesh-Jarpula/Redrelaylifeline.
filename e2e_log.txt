@@ -1,0 +1,23 @@
+PASS Login lands on dashboard
+PASS Seed: 5 active requests
+PASS Seed: 30 donors
+PASS Invalid SOS blocked: past deadline
+PASS Invalid SOS blocked: bad phone
+PASS SMS simulator lists compatible donors
+PASS SMS simulator never exposes donor phone numbers
+PASS Find donors: contact private
+PASS Find donors: initials shown (no full names)
+PASS Radius filter narrows results (12 -> 2)
+PASS Invalid donor phone rejected
+PASS Donor registered (31 donors)
+PASS Feed shows pulsing urgent cards
+PASS Donor sees urgent notification
+PASS Card updates to 1/2 Units Committed
+PASS Stepper stage = Donors Responded
+PASS Unavailable donor cannot commit
+PASS 2/2 -> Fulfilled / In Transit
+PASS 90-day lock set after confirmed donation
+PASS Mark Blood Received closes request
+PASS 24h expiry auto-closes ghost request
+PASS Logout returns to login
+JS console errors: 0

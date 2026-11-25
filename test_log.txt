@@ -1,0 +1,37 @@
+┌─────────┬────┬────────────────────────────────────────────────────────┬─────────────────┬────────┐
+│ (index) │ No │ Test                                                   │ Expected        │ Result │
+├─────────┼────┼────────────────────────────────────────────────────────┼─────────────────┼────────┤
+│ 0       │ 1  │ 'Hardcoded matrix equals ABO/Rh rule for all 64 pairs' │ 'true'          │ 'PASS' │
+│ 1       │ 2  │ 'O- can donate to all 8 groups'                        │ 'true'          │ 'PASS' │
+│ 2       │ 3  │ 'AB+ can receive from all 8 groups'                    │ 'true'          │ 'PASS' │
+│ 3       │ 4  │ 'AB+ donor can ONLY give to AB+'                       │ 'true'          │ 'PASS' │
+│ 4       │ 5  │ 'A- donates to A-, A+, AB-, AB+ only'                  │ 'A+,A-,AB+,AB-' │ 'PASS' │
+│ 5       │ 6  │ 'Rh+ donor cannot give to Rh- (B+ -> B-)'              │ 'false'         │ 'PASS' │
+│ 6       │ 7  │ 'Unknown blood group rejected'                         │ 'error'         │ 'PASS' │
+│ 7       │ 8  │ 'Valid SOS request accepted'                           │ 'true'          │ 'PASS' │
+│ 8       │ 9  │ 'Past deadline rejected'                               │ 'false'         │ 'PASS' │
+│ 9       │ 10 │ 'Deadline > 24h rejected'                              │ 'false'         │ 'PASS' │
+│ 10      │ 11 │ '9-digit doctor phone rejected'                        │ 'false'         │ 'PASS' │
+│ 11      │ 12 │ '0 units rejected'                                     │ 'false'         │ 'PASS' │
+│ 12      │ 13 │ 'Missing hospital rejected'                            │ 'false'         │ 'PASS' │
+│ 13      │ 14 │ 'Seed has 30 donors'                                   │ '30'            │ 'PASS' │
+│ 14      │ 15 │ 'Seed covers all 8 blood groups'                       │ '8'             │ 'PASS' │
+│ 15      │ 16 │ 'Seed has 5 active requests'                           │ '5'             │ 'PASS' │
+│ 16      │ 17 │ 'B+ request only matches B+/B-/O+/O- donors'           │ 'true'          │ 'PASS' │
+│ 17      │ 18 │ 'Radius filter: 1 km returns fewer than 50 km'         │ 'true'          │ 'PASS' │
+│ 18      │ 19 │ 'Results sorted nearest first'                         │ 'true'          │ 'PASS' │
+│ 19      │ 20 │ 'Unavailable donors excluded'                          │ 'true'          │ 'PASS' │
+│ 20      │ 21 │ 'Public donor object has no phone or full name'        │ 'true'          │ 'PASS' │
+│ 21      │ 22 │ 'Matching output leaks no phone'                       │ 'true'          │ 'PASS' │
+│ 22      │ 23 │ 'New request starts at stage 0 (Open)'                 │ '0'             │ 'PASS' │
+│ 23      │ 24 │ '1 of 2 units -> Donors Responded, 1/2'                │ '1/2@1'         │ 'PASS' │
+│ 24      │ 25 │ '2 of 2 units -> Fulfilled / In Transit'               │ '2'             │ 'PASS' │
+│ 25      │ 26 │ 'Same donor cannot respond twice'                      │ 'error'         │ 'PASS' │
+│ 26      │ 27 │ 'Mark Blood Received closes request'                   │ '3'             │ 'PASS' │
+│ 27      │ 28 │ 'Request auto-expires after 24h (ghost request fix)'   │ 'expired'       │ 'PASS' │
+│ 28      │ 29 │ 'Cannot respond to closed request'                     │ 'error'         │ 'PASS' │
+│ 29      │ 30 │ 'Donor locked right after donation'                    │ 'false'         │ 'PASS' │
+│ 30      │ 31 │ 'Donor available again after 90 days'                  │ 'true'          │ 'PASS' │
+│ 31      │ 32 │ 'Distance Jubilee Hills <-> Banjara Hills is 1-6 km'   │ 'true'          │ 'PASS' │
+└─────────┴────┴────────────────────────────────────────────────────────┴─────────────────┴────────┘
+ALL 32 TESTS PASSED
